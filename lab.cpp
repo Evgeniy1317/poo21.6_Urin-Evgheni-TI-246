@@ -4,7 +4,7 @@
 #include <algorithm>
 #include <windows.h>
 
-using namespace std; // теперь std:: не нужно
+using namespace std; 
 
 class Tovar {
 private:
@@ -58,15 +58,15 @@ public:
     }
 };
 
-// Функция для поиска по артикулу
+
 int findByArticle(const vector<Tovar>& vec, int article) {
     for (size_t i = 0; i < vec.size(); ++i) {
         if (vec[i].getArticle() == article) return i;
     }
-    return -1; // не найдено
+    return -1; 
 }
 
-// Функция для сортировки по артикулу
+
 void sortByArticle(vector<Tovar>& vec) {
     sort(vec.begin(), vec.end(), [](const Tovar& a, const Tovar& b) {
         return a.getArticle() < b.getArticle();
